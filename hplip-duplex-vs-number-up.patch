@@ -1,0 +1,192 @@
+diff -up hplip-3.9.8/prnt/drv/hpcups.drv.in.duplex-vs-number-up hplip-3.9.8/prnt/drv/hpcups.drv.in
+--- hplip-3.9.8/prnt/drv/hpcups.drv.in.duplex-vs-number-up	2010-04-09 13:54:34.602074675 +0100
++++ hplip-3.9.8/prnt/drv/hpcups.drv.in	2010-04-09 13:56:10.895074837 +0100
+@@ -126,7 +126,7 @@ Manufacturer "HP"
+ 
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -811,7 +811,7 @@ Manufacturer "HP"
+ 
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -1045,7 +1045,7 @@ Manufacturer "HP"
+ 
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -1262,7 +1262,7 @@ Manufacturer "HP"
+ 
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -1675,7 +1675,7 @@ Manufacturer "HP"
+ 
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -1889,7 +1889,7 @@ Manufacturer "HP"
+ 
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -2126,7 +2126,7 @@ Manufacturer "HP"
+ 
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -3756,7 +3756,7 @@ Manufacturer "HP"
+ 
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -4017,7 +4017,7 @@ Manufacturer "HP"
+ 
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -4245,7 +4245,7 @@ Manufacturer "HP"
+ 
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -4617,7 +4617,7 @@ Manufacturer "HP"
+ {
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -5033,7 +5033,7 @@ Manufacturer "HP"
+ {
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -5433,7 +5433,7 @@ Manufacturer "HP"
+ {
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -6272,7 +6272,7 @@ Manufacturer "HP"
+ 
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -7626,7 +7626,7 @@ Manufacturer "HP"
+ 
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -8299,7 +8299,7 @@ Manufacturer "HP"
+ 
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -10182,7 +10182,7 @@ Manufacturer "HP"
+ 
+   Attribute "cupsIPPReason" "hplip.plugin-error/printer requires a binary plugin, run hp-setup" ""
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -10391,7 +10391,7 @@ Manufacturer "HP"
+ {
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -10527,7 +10527,7 @@ Manufacturer "HP"
+ {
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -10686,7 +10686,7 @@ Manufacturer "HP"
+ {
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"
+@@ -10836,7 +10836,7 @@ Manufacturer "HP"
+ {
+   Group "General/General"
+ 
+-  Option "Duplex/Double-Sided Printing" PickOne PageSetup 10.0
++  Option "Duplex/Double-Sided Printing" PickOne AnySetup 10.0
+     Choice "DuplexNoTumble/Long Edge (Standard)" "<</Duplex true/Tumble false>>setpagedevice"
+     Choice "DuplexTumble/Short Edge (Flip)" "<</Duplex true/Tumble true>>setpagedevice"
+     *Choice "None/Off" "<</Duplex false/Tumble false>>setpagedevice"

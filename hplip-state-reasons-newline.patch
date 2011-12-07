@@ -1,0 +1,36 @@
+diff -up hplip-3.9.8/prnt/backend/hp.c.state-reasons-newline hplip-3.9.8/prnt/backend/hp.c
+diff -up hplip-3.9.8/prnt/hpijs/hpcups.cpp.state-reasons-newline hplip-3.9.8/prnt/hpijs/hpcups.cpp
+--- hplip-3.9.8/prnt/hpijs/hpcups.cpp.state-reasons-newline	2009-08-24 10:40:32.407070376 +0100
++++ hplip-3.9.8/prnt/hpijs/hpcups.cpp	2009-08-24 11:04:14.374016107 +0100
+@@ -315,7 +315,7 @@ int HPCups::initContext (char **argv)
+         m_pSys->pPC->constructor_error != PLUGIN_LIBRARY_MISSING &&
+         m_pSys->DisplayStatus != DISPLAY_PRINTING_CANCELED)
+     {
+-	BUG("PrintContext creation failed, error = %d", m_pSys->pPC->constructor_error);
++	BUG("PrintContext creation failed, error = %d\n", m_pSys->pPC->constructor_error);
+ 	return 1;
+     }
+ 
+@@ -347,11 +347,11 @@ int HPCups::initContext (char **argv)
+ 	    case WARN_LOW_INK_YELLOW:
+ 	    case WARN_LOW_INK_MULTIPLE_PENS:
+ 	    {
+-	       BUG ("STATE: +marker-supply-low-warning\n");
++	       fputs ("STATE: +marker-supply-low-warning\n", stderr);
+ 	       break;
+ 	    }
+ 	    default:
+-	       BUG ("STATE: -marker-supply-low-warning\n");
++	       fputs ("STATE: -marker-supply-low-warning\n", stderr);
+ 	}
+     }
+ 
+@@ -678,7 +678,7 @@ void CancelPrintJob (int sig)
+ int main (int argc, char **argv)
+ {
+     int iRet = hpCups.ProcessJob (argc, argv);
+-    BUG("hpcups: returning status %d from main", iRet);
++    BUG("hpcups: returning status %d from main\n", iRet);
+     return iRet;
+ }
+ 

@@ -1,0 +1,39 @@
+diff -up hplip-3.9.8/prnt/hpijs/dj9xxvip.cpp.bad-low-ink-warning hplip-3.9.8/prnt/hpijs/dj9xxvip.cpp
+--- hplip-3.9.8/prnt/hpijs/dj9xxvip.cpp.bad-low-ink-warning	2009-08-04 22:43:01.000000000 +0100
++++ hplip-3.9.8/prnt/hpijs/dj9xxvip.cpp	2009-11-26 14:34:09.944179766 +0000
+@@ -2222,7 +2222,7 @@ DRIVER_ERROR DJ9xxVIP::CheckInkLevel()
+             {
+                 case '5':
+                 {
+-                    if ((*(pStr+1) & 0xf3) > 1)
++                    if ((*(pStr+1) & 0xf3) > '1')
+                     {
+                         if (err != NO_ERROR)
+                         {
+@@ -2237,7 +2237,7 @@ DRIVER_ERROR DJ9xxVIP::CheckInkLevel()
+                 }
+                 case '6':
+                 {
+-                    if ((*(pStr+1) & 0xf3) > 1)
++                    if ((*(pStr+1) & 0xf3) > '1')
+                     {
+                         if (err != NO_ERROR)
+                         {
+@@ -2252,7 +2252,7 @@ DRIVER_ERROR DJ9xxVIP::CheckInkLevel()
+                 }
+                 case '7':
+                 {
+-                    if ((*(pStr+1) & 0xf3) > 1)
++                    if ((*(pStr+1) & 0xf3) > '1')
+                     {
+                         if (err != NO_ERROR)
+                         {
+@@ -2268,7 +2268,7 @@ DRIVER_ERROR DJ9xxVIP::CheckInkLevel()
+                 }
+                 case '8':
+                 {
+-                    if ((*(pStr+1) & 0xf3) > 1)
++                    if ((*(pStr+1) & 0xf3) > '1')
+                     {
+                         if (err != NO_ERROR)
+                         {

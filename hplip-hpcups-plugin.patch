@@ -1,0 +1,318 @@
+diff -up hplip-3.9.8/prnt/drv/hpcups.drv.in.plugin hplip-3.9.8/prnt/drv/hpcups.drv.in
+--- hplip-3.9.8/prnt/drv/hpcups.drv.in.plugin	2009-11-02 13:47:00.325103235 +0000
++++ hplip-3.9.8/prnt/drv/hpcups.drv.in	2009-11-02 14:48:00.070102977 +0000
+@@ -6659,7 +6659,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet m1522nf MFP"
+-      Attribute "NickName" "" "HP LaserJet m1522nf MFP pcl3, $Version"
++      Attribute "NickName" "" "HP LaserJet m1522nf MFP pcl3, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet m1522nf MFP"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet m1522nf mfp;DES:hp laserjet m1522nf mfp;"
+       PCFileName "hp-laserjet_m1522nf_mfp-pcl3.ppd"
+@@ -6723,7 +6723,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet p2035n"
+-      Attribute "NickName" "" "HP LaserJet p2035n pcl3, $Version"
++      Attribute "NickName" "" "HP LaserJet p2035n pcl3, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet p2035n"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet p2035n;DES:hp laserjet p2035n;"
+       PCFileName "hp-laserjet_p2035n-pcl3.ppd"
+@@ -6731,7 +6731,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet p2035"
+-      Attribute "NickName" "" "HP LaserJet p2035 pcl3, $Version"
++      Attribute "NickName" "" "HP LaserJet p2035 pcl3, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet p2035"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet p2035;DES:hp laserjet p2035;"
+       PCFileName "hp-laserjet_p2035-pcl3.ppd"
+@@ -6864,7 +6864,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet m2727 MFP"
+-      Attribute "NickName" "" "HP LaserJet m2727 MFP pcl3, $Version"
++      Attribute "NickName" "" "HP LaserJet m2727 MFP pcl3, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet m2727 MFP"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet m2727 mfp;DES:hp laserjet m2727 mfp;"
+       PCFileName "hp-laserjet_m2727_mfp-pcl3.ppd"
+@@ -7734,7 +7734,7 @@ Manufacturer "HP"
+     // <%LJColor:Normal%>
+     {
+       ModelName "HP Color LaserJet cm1312 MFP"
+-      Attribute "NickName" "" "HP Color LaserJet cm1312 MFP pcl3, $Version"
++      Attribute "NickName" "" "HP Color LaserJet cm1312 MFP pcl3, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP Color LaserJet cm1312 MFP"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp color laserjet cm1312 mfp;DES:hp color laserjet cm1312 mfp;"
+       PCFileName "hp-color_laserjet_cm1312_mfp-pcl3.ppd"
+@@ -7742,7 +7742,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP Color LaserJet cm1312nfi MFP"
+-      Attribute "NickName" "" "HP Color LaserJet cm1312nfi MFP pcl3, $Version"
++      Attribute "NickName" "" "HP Color LaserJet cm1312nfi MFP pcl3, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP Color LaserJet cm1312nfi MFP"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp color laserjet cm1312nfi mfp;DES:hp color laserjet cm1312nfi mfp;"
+       PCFileName "hp-color_laserjet_cm1312nfi_mfp-pcl3.ppd"
+@@ -7816,7 +7816,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP Color LaserJet cm2320 MFP"
+-      Attribute "NickName" "" "HP Color LaserJet cm2320 MFP pcl3, $Version"
++      Attribute "NickName" "" "HP Color LaserJet cm2320 MFP pcl3, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP Color LaserJet cm2320 MFP"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp color laserjet cm2320 mfp;DES:hp color laserjet cm2320 mfp;"
+       PCFileName "hp-color_laserjet_cm2320_mfp-pcl3.ppd"
+@@ -7824,7 +7824,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP Color LaserJet cm2320fxi MFP"
+-      Attribute "NickName" "" "HP Color LaserJet cm2320fxi MFP pcl3, $Version"
++      Attribute "NickName" "" "HP Color LaserJet cm2320fxi MFP pcl3, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP Color LaserJet cm2320fxi MFP"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp color laserjet cm2320fxi mfp;DES:hp color laserjet cm2320fxi mfp;"
+       PCFileName "hp-color_laserjet_cm2320fxi_mfp-pcl3.ppd"
+@@ -7832,7 +7832,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP Color LaserJet cm2320n MFP"
+-      Attribute "NickName" "" "HP Color LaserJet cm2320n MFP pcl3, $Version"
++      Attribute "NickName" "" "HP Color LaserJet cm2320n MFP pcl3, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP Color LaserJet cm2320n MFP"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp color laserjet cm2320n mfp;DES:hp color laserjet cm2320n mfp;"
+       PCFileName "hp-color_laserjet_cm2320n_mfp-pcl3.ppd"
+@@ -7840,7 +7840,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP Color LaserJet cm2320nf MFP"
+-      Attribute "NickName" "" "HP Color LaserJet cm2320nf MFP pcl3, $Version"
++      Attribute "NickName" "" "HP Color LaserJet cm2320nf MFP pcl3, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP Color LaserJet cm2320nf MFP"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp color laserjet cm2320nf mfp;DES:hp color laserjet cm2320nf mfp;"
+       PCFileName "hp-color_laserjet_cm2320nf_mfp-pcl3.ppd"
+@@ -10287,7 +10287,7 @@ Manufacturer "HP"
+     // <%LJZjsMono:Normal%>
+     {
+       ModelName "HP LaserJet 1000"
+-      Attribute "NickName" "" "HP LaserJet 1000, $Version"
++      Attribute "NickName" "" "HP LaserJet 1000, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet 1000"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet 1000;DES:hp laserjet 1000;"
+       PCFileName "hp-laserjet_1000.ppd"
+@@ -10295,7 +10295,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet 1005 Series"
+-      Attribute "NickName" "" "HP LaserJet 1005 Series, $Version"
++      Attribute "NickName" "" "HP LaserJet 1005 Series, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet 1005 Series"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet 1005 series;DES:hp laserjet 1005 series;"
+       PCFileName "hp-laserjet_1005_series.ppd"
+@@ -10303,7 +10303,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet 1018"
+-      Attribute "NickName" "" "HP LaserJet 1018, $Version"
++      Attribute "NickName" "" "HP LaserJet 1018, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet 1018"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet 1018;DES:hp laserjet 1018;"
+       PCFileName "hp-laserjet_1018.ppd"
+@@ -10312,7 +10312,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet 1020"
+-      Attribute "NickName" "" "HP LaserJet 1020, $Version"
++      Attribute "NickName" "" "HP LaserJet 1020, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet 1020"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet 1020;DES:hp laserjet 1020;"
+       PCFileName "hp-laserjet_1020.ppd"
+@@ -10321,7 +10321,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet 1022nw"
+-      Attribute "NickName" "" "HP LaserJet 1022nw zjs, $Version"
++      Attribute "NickName" "" "HP LaserJet 1022nw zjs, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet 1022nw"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet 1022nw;DES:hp laserjet 1022nw;"
+       PCFileName "hp-laserjet_1022nw-zjs.ppd"
+@@ -10329,7 +10329,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet 1022n"
+-      Attribute "NickName" "" "HP LaserJet 1022n zjs, $Version"
++      Attribute "NickName" "" "HP LaserJet 1022n zjs, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet 1022n"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet 1022n;DES:hp laserjet 1022n;"
+       PCFileName "hp-laserjet_1022n-zjs.ppd"
+@@ -10338,7 +10338,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet 1022"
+-      Attribute "NickName" "" "HP LaserJet 1022 zjs, $Version"
++      Attribute "NickName" "" "HP LaserJet 1022 zjs, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet 1022"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet 1022;DES:hp laserjet 1022;"
+       PCFileName "hp-laserjet_1022-zjs.ppd"
+@@ -10346,7 +10346,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet m1120 MFP"
+-      Attribute "NickName" "" "HP LaserJet m1120 MFP, $Version"
++      Attribute "NickName" "" "HP LaserJet m1120 MFP, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet m1120 MFP"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet m1120 mfp;DES:hp laserjet m1120 mfp;"
+       PCFileName "hp-laserjet_m1120_mfp.ppd"
+@@ -10354,7 +10354,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet m1120n MFP"
+-      Attribute "NickName" "" "HP LaserJet m1120n MFP, $Version"
++      Attribute "NickName" "" "HP LaserJet m1120n MFP, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet m1120n MFP"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet m1120n mfp;DES:hp laserjet m1120n mfp;"
+       PCFileName "hp-laserjet_m1120n_mfp.ppd"
+@@ -10362,7 +10362,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet m1319f MFP"
+-      Attribute "NickName" "" "HP LaserJet m1319f MFP, $Version"
++      Attribute "NickName" "" "HP LaserJet m1319f MFP, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet m1319f MFP"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet m1319f mfp;DES:hp laserjet m1319f mfp;"
+       PCFileName "hp-laserjet_m1319f_mfp.ppd"
+@@ -10370,7 +10370,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet p2035n"
+-      Attribute "NickName" "" "HP LaserJet p2035n zjs, $Version"
++      Attribute "NickName" "" "HP LaserJet p2035n zjs, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet p2035n"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet p2035n;DES:hp laserjet p2035n;"
+       PCFileName "hp-laserjet_p2035n-zjs.ppd"
+@@ -10378,7 +10378,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet p2035"
+-      Attribute "NickName" "" "HP LaserJet p2035 zjs, $Version"
++      Attribute "NickName" "" "HP LaserJet p2035 zjs, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet p2035"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet p2035;DES:hp laserjet p2035;"
+       PCFileName "hp-laserjet_p2035-zjs.ppd"
+@@ -10498,7 +10498,7 @@ Manufacturer "HP"
+     // <%LJZjsColor:Normal%>
+     {
+       ModelName "HP Color LaserJet cp1215"
+-      Attribute "NickName" "" "HP Color LaserJet cp1215, $Version"
++      Attribute "NickName" "" "HP Color LaserJet cp1215, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP Color LaserJet cp1215"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp color laserjet cp1215;DES:hp color laserjet cp1215;"
+       PCFileName "hp-color_laserjet_cp1215.ppd"
+@@ -10506,7 +10506,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP Color LaserJet 1600"
+-      Attribute "NickName" "" "HP Color LaserJet 1600, $Version"
++      Attribute "NickName" "" "HP Color LaserJet 1600, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP Color LaserJet 1600"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp color laserjet 1600;DES:hp color laserjet 1600;"
+       PCFileName "hp-color_laserjet_1600.ppd"
+@@ -10514,7 +10514,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP Color LaserJet 2600n"
+-      Attribute "NickName" "" "HP Color LaserJet 2600n, $Version"
++      Attribute "NickName" "" "HP Color LaserJet 2600n, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP Color LaserJet 2600n"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp color laserjet 2600n;DES:hp color laserjet 2600n;"
+       PCFileName "hp-color_laserjet_2600n.ppd"
+@@ -10791,7 +10791,7 @@ Manufacturer "HP"
+     // <%LJm1005:Normal%>
+     {
+       ModelName "HP LaserJet m1005"
+-      Attribute "NickName" "" "HP LaserJet m1005, $Version"
++      Attribute "NickName" "" "HP LaserJet m1005, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet m1005"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet m1005;DES:hp laserjet m1005;"
+       PCFileName "hp-laserjet_m1005.ppd"
+@@ -10799,7 +10799,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet p1505n"
+-      Attribute "NickName" "" "HP LaserJet p1505n zxs, $Version"
++      Attribute "NickName" "" "HP LaserJet p1505n zxs, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet p1505n"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet p1505n;DES:hp laserjet p1505n;"
+       PCFileName "hp-laserjet_p1505n-zxs.ppd"
+@@ -10807,7 +10807,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet p1505"
+-      Attribute "NickName" "" "HP LaserJet p1505, $Version"
++      Attribute "NickName" "" "HP LaserJet p1505, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet p1505"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet p1505;DES:hp laserjet p1505;"
+       PCFileName "hp-laserjet_p1505.ppd"
+@@ -10815,7 +10815,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet p2014"
+-      Attribute "NickName" "" "HP LaserJet p2014 zxs, $Version"
++      Attribute "NickName" "" "HP LaserJet p2014 zxs, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet p2014"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet p2014;DES:hp laserjet p2014;"
+       PCFileName "hp-laserjet_p2014-zxs.ppd"
+@@ -10823,7 +10823,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet p2014n"
+-      Attribute "NickName" "" "HP LaserJet p2014n zxs, $Version"
++      Attribute "NickName" "" "HP LaserJet p2014n zxs, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet p2014n"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet p2014n;DES:hp laserjet p2014n;"
+       PCFileName "hp-laserjet_p2014n-zxs.ppd"
+@@ -10941,7 +10941,7 @@ Manufacturer "HP"
+     // <%LJP1XXX:Normal%>
+     {
+       ModelName "HP LaserJet p1005"
+-      Attribute "NickName" "" "HP LaserJet p1005, $Version"
++      Attribute "NickName" "" "HP LaserJet p1005, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet p1005"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet p1005;DES:hp laserjet p1005;"
+       PCFileName "hp-laserjet_p1005.ppd"
+@@ -10949,7 +10949,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet p1006"
+-      Attribute "NickName" "" "HP LaserJet p1006, $Version"
++      Attribute "NickName" "" "HP LaserJet p1006, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet p1006"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet p1006;DES:hp laserjet p1006;"
+       PCFileName "hp-laserjet_p1006.ppd"
+@@ -10957,7 +10957,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet p1007"
+-      Attribute "NickName" "" "HP LaserJet p1007, $Version"
++      Attribute "NickName" "" "HP LaserJet p1007, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet p1007"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet p1007;DES:hp laserjet p1007;"
+       PCFileName "hp-laserjet_p1007.ppd"
+@@ -10965,7 +10965,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet p1008"
+-      Attribute "NickName" "" "HP LaserJet p1008, $Version"
++      Attribute "NickName" "" "HP LaserJet p1008, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet p1008"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet p1008;DES:hp laserjet p1008;"
+       PCFileName "hp-laserjet_p1008.ppd"
+@@ -10973,7 +10973,7 @@ Manufacturer "HP"
+     }
+     {
+       ModelName "HP LaserJet p1009"
+-      Attribute "NickName" "" "HP LaserJet p1009, $Version"
++      Attribute "NickName" "" "HP LaserJet p1009, $Version, requires proprietary plugin"
+       Attribute "ShortNickName" "" "HP LaserJet p1009"
+       Attribute "1284DeviceID" "" "MFG:HP;MDL:hp laserjet p1009;DES:hp laserjet p1009;"
+       PCFileName "hp-laserjet_p1009.ppd"

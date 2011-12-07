@@ -1,0 +1,11 @@
+diff -up hplip-3.9.8/ui4/systemtray.py.tray-icon-crash hplip-3.9.8/ui4/systemtray.py
+--- hplip-3.9.8/ui4/systemtray.py.tray-icon-crash	2009-08-04 22:37:22.000000000 +0100
++++ hplip-3.9.8/ui4/systemtray.py	2010-04-09 15:21:45.017949613 +0100
+@@ -489,6 +489,7 @@ class SystemTrayApp(QApplication):
+         log.debug("Exiting")
+         self.sendMessage('', '', EVENT_SYSTEMTRAY_EXIT)
+         self.quit()
++        del self.tray_icon
+ 
+ 
+     def toolboxTriggered(self):

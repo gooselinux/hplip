@@ -1,0 +1,30 @@
+diff -up hplip-3.9.8/prnt/backend/hp.c.retry-open hplip-3.9.8/prnt/backend/hp.c
+--- hplip-3.9.8/prnt/backend/hp.c.retry-open	2010-01-05 15:11:56.045911892 +0000
++++ hplip-3.9.8/prnt/backend/hp.c	2010-01-05 15:12:04.236911642 +0000
+@@ -724,11 +724,21 @@ int main(int argc, char *argv[])
+                /* Open hp device. */
+                while ((stat = hpmud_open_device(argv[0], ma.prt_mode, &hd)) != HPMUD_R_OK)
+                {
+-                  if (stat != HPMUD_R_DEVICE_BUSY)
+-                  {
+-                     BUG("ERROR: cannot open device stat=%d: %s\n", stat, argv[0]);
+-                     goto bugout;
+-                  }
++		  if (getenv ("CLASS") != NULL)
++		  {
++		     /* If the CLASS environment variable is set we
++		      * need to give other class members a chance in
++		      * case their devices are ready to go.
++		      */
++
++		     BUG("INFO: cannot open device stat=%d: %s\n", stat, argv[0]);
++		     BUG("INFO: queuing on next printer in class...\n");
++
++		     /* Prevent job requeuing too quickly. */
++		     sleep (5);
++
++		     goto bugout;
++		  }
+ 
+                   /* Display user error. */
+                   device_event(argv[0], printer, 5000+stat, argv[2], argv[1], argv[3]);
