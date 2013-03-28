@@ -1,0 +1,29 @@
+diff -up hplip-3.9.8/prnt/backend/hp.c.clear-previous-state-reasons hplip-3.9.8/prnt/backend/hp.c
+--- hplip-3.9.8/prnt/backend/hp.c.clear-previous-state-reasons	2009-08-04 22:35:33.000000000 +0100
++++ hplip-3.9.8/prnt/backend/hp.c	2009-08-24 09:55:28.941900902 +0100
+@@ -570,6 +570,14 @@ static int loop_test(HPMUD_DEVICE dd, HP
+ {
+    int status, stat;
+    const char *pstate, *old_state=NULL;
++   static int first_time = 1;
++
++   if (first_time)
++   {
++      first_time = 0;
++      old_state = ("media-empty-error,media-jam-error,"
++		   "cover-open-error,toner-empty-error,other");
++   }
+ 
+    while (1)
+    {
+@@ -768,6 +776,10 @@ int main(int argc, char *argv[])
+                   pthread_cond_init(&pa.done_cond, NULL);
+                   pthread_create(&pa.tid, NULL, (void *(*)(void*))pjl_read_thread, (void *)&pa);
+                }
++
++	       /* Clear any errors left over from a previous run. */
++	       loop_test (hd, cd, &pa, argv[0], printer, argv[2], argv[1],
++			  argv[3]);
+             }
+ 
+             stat = hpmud_write_channel(hd, cd, buf+total, size, EXCEPTION_TIMEOUT, &n);

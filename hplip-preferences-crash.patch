@@ -1,0 +1,14 @@
+diff -up hplip-3.9.8/ui4/devmgr5.py.preferences-crash hplip-3.9.8/ui4/devmgr5.py
+--- hplip-3.9.8/ui4/devmgr5.py.preferences-crash	2009-08-04 22:37:22.000000000 +0100
++++ hplip-3.9.8/ui4/devmgr5.py	2010-01-20 12:10:15.728561588 +0000
+@@ -2019,7 +2019,9 @@ class DevMgr5(QMainWindow,  Ui_MainWindo
+         if dlg.exec_() == QDialog.Accepted:
+             self.user_settings.load()
+ 
+-            self.cur_device.sendEvent(EVENT_USER_CONFIGURATION_CHANGED, self.cur_printer)
++            if self.cur_device is not None:
++                self.cur_device.sendEvent(EVENT_USER_CONFIGURATION_CHANGED,
++                                          self.cur_printer)
+ 
+ 
+     # ***********************************************************************************

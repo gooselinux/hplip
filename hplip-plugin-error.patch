@@ -1,0 +1,23 @@
+diff -up hplip-3.9.8/prnt/backend/hp.c~ hplip-3.9.8/prnt/backend/hp.c
+--- hplip-3.9.8/prnt/backend/hp.c~	2009-10-28 17:03:27.435140391 +0000
++++ hplip-3.9.8/prnt/backend/hp.c	2009-10-28 17:12:15.709140073 +0000
+@@ -575,7 +575,7 @@ static int loop_test(HPMUD_DEVICE dd, HP
+    if (first_time)
+    {
+       first_time = 0;
+-      old_state = ("media-empty-error,media-jam-error,"
++      old_state = ("media-empty-error,media-jam-error,hplip.plugin-error,"
+ 		   "cover-open-error,toner-empty-error,other");
+    }
+ 
+diff -up hplip-3.9.8/prnt/hpijs/hpcups.cpp~ hplip-3.9.8/prnt/hpijs/hpcups.cpp
+--- hplip-3.9.8/prnt/hpijs/hpcups.cpp~	2009-10-28 17:03:27.390139541 +0000
++++ hplip-3.9.8/prnt/hpijs/hpcups.cpp	2009-10-28 17:11:18.980140742 +0000
+@@ -384,6 +384,7 @@ int HPCups::initContext (char **argv)
+ 	SendDbusMessage (device_uri, printer,
+ 	                 EVENT_PRINT_FAILED_MISSING_PLUGIN,
+ 			 argv[2], atoi (argv[1]), argv[3]);
++	fputs ("STATE: +hplip.plugin-error\n", stderr);
+ 	BUG ("ERROR: unable to set device = %s, err = %d\n", attr->value, err);
+ 	return 1;
+     }
